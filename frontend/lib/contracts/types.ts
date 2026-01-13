@@ -1,5 +1,5 @@
 /**
- * TypeScript types for GenLayer Football Betting contract
+ * TypeScript types for GenLayer Esports Betting contract
  */
 
 export interface Bet {

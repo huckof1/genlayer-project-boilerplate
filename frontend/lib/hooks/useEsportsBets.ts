@@ -2,14 +2,14 @@
 
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import FootballBets from "../contracts/FootballBets";
+import EsportsBets from "../contracts/EsportsBets";
 import { getContractAddress, getStudioUrl } from "../genlayer/client";
 import { useWallet } from "../genlayer/wallet";
 import { success, error, configError } from "../utils/toast";
 import type { Bet, LeaderboardEntry } from "../contracts/types";
 
 /**
- * Hook to get the FootballBets contract instance
+ * Hook to get the EsportsBets contract instance
  *
  * Returns null if contract address is not configured.
  * The contract instance is recreated whenever the wallet address changes.
@@ -17,7 +17,7 @@ import type { Bet, LeaderboardEntry } from "../contracts/types";
  * Write operations (createBet, resolveBet) require a connected wallet and will fail
  * if the address is null. Defensive validation is added in the mutation hooks.
  */
-export function useFootballBetsContract(): FootballBets | null {
+export function useEsportsBetsContract(): EsportsBets | null {
   const { address } = useWallet();
   const contractAddress = getContractAddress();
   const studioUrl = getStudioUrl();
@@ -39,7 +39,7 @@ export function useFootballBetsContract(): FootballBets | null {
 
     // Contract instance is recreated when address changes to ensure
     // the genlayer-js client is properly configured with the current account
-    return new FootballBets(contractAddress, address, studioUrl);
+    return new EsportsBets(contractAddress, address, studioUrl);
   }, [contractAddress, address, studioUrl]);
 
   return contract;
@@ -51,7 +51,7 @@ export function useFootballBetsContract(): FootballBets | null {
  * Returns empty array if contract is not configured
  */
 export function useBets() {
-  const contract = useFootballBetsContract();
+  const contract = useEsportsBetsContract();
 
   return useQuery<Bet[], Error>({
     queryKey: ["bets"],
@@ -73,7 +73,7 @@ export function useBets() {
  * Returns 0 if contract is not configured
  */
 export function usePlayerPoints(address: string | null) {
-  const contract = useFootballBetsContract();
+  const contract = useEsportsBetsContract();
 
   return useQuery<number, Error>({
     queryKey: ["playerPoints", address],
@@ -95,7 +95,7 @@ export function usePlayerPoints(address: string | null) {
  * Returns empty array if contract is not configured
  */
 export function useLeaderboard() {
-  const contract = useFootballBetsContract();
+  const contract = useEsportsBetsContract();
 
   return useQuery<LeaderboardEntry[], Error>({
     queryKey: ["leaderboard"],
@@ -115,7 +115,7 @@ export function useLeaderboard() {
  * Hook to create a new bet
  */
 export function useCreateBet() {
-  const contract = useFootballBetsContract();
+  const contract = useEsportsBetsContract();
   const { address } = useWallet();
   const queryClient = useQueryClient();
   const [isCreating, setIsCreating] = useState(false);
@@ -172,7 +172,7 @@ export function useCreateBet() {
  * Hook to resolve a bet
  */
 export function useResolveBet() {
-  const contract = useFootballBetsContract();
+  const contract = useEsportsBetsContract();
   const { address } = useWallet();
   const queryClient = useQueryClient();
   const [isResolving, setIsResolving] = useState(false);

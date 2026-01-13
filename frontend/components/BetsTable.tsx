@@ -1,7 +1,7 @@
 "use client";
 
 import { Loader2, Trophy, Clock, AlertCircle } from "lucide-react";
-import { useBets, useResolveBet, useFootballBetsContract } from "@/lib/hooks/useFootballBets";
+import { useBets, useResolveBet, useEsportsBetsContract } from "@/lib/hooks/useEsportsBets";
 import { useWallet } from "@/lib/genlayer/wallet";
 import { error } from "@/lib/utils/toast";
 import { AddressDisplay } from "./AddressDisplay";
@@ -10,7 +10,7 @@ import { Badge } from "./ui/badge";
 import type { Bet } from "@/lib/contracts/types";
 
 export function BetsTable() {
-  const contract = useFootballBetsContract();
+  const contract = useEsportsBetsContract();
   const { data: bets, isLoading, isError } = useBets();
   const { address, isConnected, isLoading: isWalletLoading } = useWallet();
   const { resolveBet, isResolving, resolvingBetId } = useResolveBet();
@@ -76,7 +76,7 @@ export function BetsTable() {
           <Trophy className="w-16 h-16 mx-auto text-muted-foreground opacity-30" />
           <h3 className="text-xl font-bold">No Bets Yet</h3>
           <p className="text-muted-foreground">
-            Be the first to create a football prediction bet!
+            Be the first to create a esports prediction bet!
           </p>
         </div>
       </div>

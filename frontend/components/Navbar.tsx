@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { AccountPanel } from "./AccountPanel";
 import { CreateBetModal } from "./CreateBetModal";
-import { useBets } from "@/lib/hooks/useFootballBets";
+import { useBets } from "@/lib/hooks/useEsportsBets";
 import { Logo, LogoMark } from "./Logo";
 
 export function Navbar() {
@@ -89,7 +89,7 @@ export function Navbar() {
                 {/* Show mark only on mobile, full logo on desktop */}
                 <LogoMark size="md" className="flex md:hidden" />
                 <Logo size="md" className="hidden md:flex" />
-                <span className="text-lg md:text-xl font-bold ml-2">Football Market</span>
+                <span className="text-lg md:text-xl font-bold ml-2">Esports Market</span>
               </div>
 
               {/* Center: Stats */}

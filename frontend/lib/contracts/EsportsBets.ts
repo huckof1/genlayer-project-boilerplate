@@ -3,9 +3,9 @@ import { studionet } from "genlayer-js/chains";
 import type { Bet, LeaderboardEntry, TransactionReceipt } from "./types";
 
 /**
- * FootballBets contract class for interacting with the GenLayer Football Betting contract
+ * EsportsBets contract class for interacting with the GenLayer Esports Betting contract
  */
-class FootballBets {
+class EsportsBets {
   private contractAddress: `0x${string}`;
   private client: ReturnType<typeof createClient>;
 
@@ -202,4 +202,4 @@ class FootballBets {
   }
 }
 
-export default FootballBets;
+export default EsportsBets;

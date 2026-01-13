@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Plus, Loader2, Calendar, Users } from "lucide-react";
-import { useCreateBet } from "@/lib/hooks/useFootballBets";
+import { useCreateBet } from "@/lib/hooks/useEsportsBets";
 import { useWallet } from "@/lib/genlayer/wallet";
 import { success, error } from "@/lib/utils/toast";
 import { Button } from "./ui/button";
@@ -116,9 +116,9 @@ export function CreateBetModal() {
       </DialogTrigger>
       <DialogContent className="brand-card border-2 sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">Create Football Bet</DialogTitle>
+          <DialogTitle className="text-2xl font-bold">Create Esports Bet</DialogTitle>
           <DialogDescription>
-            Make your prediction for an upcoming football match
+            Make your prediction for an upcoming esports match
           </DialogDescription>
         </DialogHeader>
 

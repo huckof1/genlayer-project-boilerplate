@@ -1,7 +1,7 @@
 {
-  "name": "genlayer-football-betting",
+  "name": "genlayer-esports-betting",
   "version": "1.0.0",
-  "description": "GenLayer Football Betting - AI-powered prediction betting on GenLayer blockchain.",
+  "description": "GenLayer Esports Betting - AI-powered prediction betting on GenLayer blockchain.",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",

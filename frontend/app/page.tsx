@@ -16,10 +16,10 @@ export default function HomePage() {
           {/* Hero Section */}
           <div className="text-center mb-8 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Football Prediction Betting
+              Esports Prediction Betting
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              AI-powered football match predictions on GenLayer blockchain.
+              AI-powered esports match predictions on GenLayer blockchain.
               <br />
               Create bets, make predictions, and compete for points.
             </p>
@@ -45,7 +45,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <div className="text-accent font-bold text-lg">1. Create a Bet</div>
                 <p className="text-sm text-muted-foreground">
-                  Connect your wallet and create a football match prediction. Choose the teams, date, and your predicted winner.
+                  Connect your wallet and create a esports match prediction. Choose the teams, date, and your predicted winner.
                 </p>
               </div>
               <div className="space-y-2">
@@ -57,7 +57,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <div className="text-accent font-bold text-lg">3. Earn Points</div>
                 <p className="text-sm text-muted-foreground">
-                  Correct predictions earn you points. Climb the leaderboard and prove your football knowledge!
+                  Correct predictions earn you points. Climb the leaderboard and prove your esports knowledge!
                 </p>
               </div>
             </div>

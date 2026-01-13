@@ -1,6 +1,6 @@
-# GenLayer Football Market
+# GenLayer Esports Market
 
-Next.js frontend for GenLayer Football Market - AI-powered football match predictions on GenLayer blockchain.
+Next.js frontend for GenLayer Esports Market - AI-powered esports match predictions on GenLayer blockchain.
 
 ## Setup
 
@@ -22,7 +22,7 @@ cp .env.example .env
 ```
 
 3. Configure environment variables:
-   - `NEXT_PUBLIC_CONTRACT_ADDRESS` - GenLayer Football Betting contract address
+   - `NEXT_PUBLIC_CONTRACT_ADDRESS` - GenLayer Esports Betting contract address
    - `NEXT_PUBLIC_STUDIO_URL` - GenLayer Studio URL (default: https://studio.genlayer.com/api)
 
 ## Development
@@ -75,7 +75,7 @@ Accounts are stored in browser's localStorage for development convenience.
 
 ## Features
 
-- **Create Bets**: Create football match predictions with team names, game date, and predicted winner (Team 1, Team 2, or Draw)
+- **Create Bets**: Create esports match predictions with team names, game date, and predicted winner (Team 1, Team 2, or Draw)
 - **View Bets**: Real-time bet table with match details, predictions, status, and owners
 - **Resolve Bets**: Bet owners can resolve matches using GenLayer's AI to verify actual results
 - **Leaderboard**: Track top players by points earned from correct predictions
